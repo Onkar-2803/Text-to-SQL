@@ -35,7 +35,7 @@ Write a SQL query that answers the following question:
 
 Future Work:  
 - Use Better Model:  
-To increase the accuracy of generating SQL queries, as mentioned above in the Models section we can use Alpaca, GPT4, Santacoder. These models are trained on large amounts of data which is closely related to our fine tuning task.  
+  -  To increase the accuracy of generating SQL queries, as mentioned above in the Models section we can use Alpaca, GPT4, Santacoder. These models are trained on large amounts of data which is closely related to our fine tuning task.  
 - Use Better Dataset:  
 Currently I’m training the model on just 10,000 data points due to computational limitations. Model trained on all 78577 data points will perform better.  
 Current dataset doesn’t contain all the types of SQL queries, for example: there is a lack of queries which ask to calculate the percentage of a given column, or do aggregation between columns. There is a lack of complex queries. If we generate a few examples of such complex queries, the model will perform better.

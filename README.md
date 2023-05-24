@@ -9,17 +9,17 @@
 - Upload the .csv files of HR data for the model to query on it.  
 
 
-Methodology: 
+## Methodology: ##
 An overview of my approach is, I convert the natural language into SQL queries and then execute those queries with the help of sqlite3 in python. Have used the happytransformer library acts as a wrapper to ease the implementation of text-generation models like T5, BART.
 
-Models:
+### Models:  ###
 - I have used a pre-trained t5 model for the task.  
 - There were a variety of choices for models like [t5](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html), [BART](https://arxiv.org/abs/1910.13461), [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html), GPT4, [SantaCoder](https://huggingface.co/bigcode/santacoder?text=Convert+to+SQL%3A+How+many+employees+were+hired+last+month%3F%0A%0A%2F%2F+1.+How+many+employees+were+hired+last+month%3F%0A%0A%2F%2F+2.+How+many+employees+were+hired+last+month%3F%0A%0A%2F%2F+3.+How+many+employees+were) etc.  
 - Amongst this I believe GPT4 or SantaCoder would have been the best model to use. GPT4 has shown to work well on natural language to SQL query tasks. SantaCoder model has been pre-trained for code generation on [‘the stack’](https://huggingface.co/datasets/bigcode/the-stack) dataset. The dataset contains 358 programming languages and SQL is one of them.  
 - I didn’t have access to GPT4, and models like SantaCoder & Alpaca require a lot of computational resources to be finetuned. Hence I had to choose between BART or t5.  
 - After doing literature review, I realized that t5 performed better for text-to-text generation tasks that BART. Hence I decided to go forward with t5.  
 
-Dataset:  
+### Dataset:  ###
 - 2 datasets are publically available named: [sql-create-context](https://huggingface.co/datasets/b-mc2/sql-create-context), [sql-create-context_alpaca_style](https://huggingface.co/datasets/lucasmccabe-lmi/sql-create-context_alpaca_style/viewer/lucasmccabe-lmi--sql-create-context_alpaca_style/train?row=0).  
 - Both of them have the same raw data, but the later one some prompting instruction. Hence I decided to use the later one.  
 - The T5 model requires the input data to have some fix token/prompt which is constant throughout all the data points.   
@@ -33,7 +33,7 @@ Write a SQL query that answers the following question:
 
 - This will help the model understand the context of our task better.  
 
-Future Work:  
+## Future Work:  ##
 - Use Better Model:  
   -  To increase the accuracy of generating SQL queries, as mentioned above in the Models section we can use Alpaca, GPT4, Santacoder. These models are trained on large amounts of data which is closely related to our fine tuning task.  
   

@@ -36,17 +36,19 @@ Write a SQL query that answers the following question:
 Future Work:  
 - Use Better Model:  
   -  To increase the accuracy of generating SQL queries, as mentioned above in the Models section we can use Alpaca, GPT4, Santacoder. These models are trained on large amounts of data which is closely related to our fine tuning task.  
+  -  
 - Use Better Dataset:  
-Currently I’m training the model on just 10,000 data points due to computational limitations. Model trained on all 78577 data points will perform better.  
-Current dataset doesn’t contain all the types of SQL queries, for example: there is a lack of queries which ask to calculate the percentage of a given column, or do aggregation between columns. There is a lack of complex queries. If we generate a few examples of such complex queries, the model will perform better.
-While currently passing the input: when writing the create table statement, only single tables are created. If we generate some data points which create multiple tables, and have foreign key, primary key references in them. The model can understand relationships between different tables.
-Improved Training Methods:
-Chain of thoughts prompting: In order to reduce error propagation and enhance results on text-to-SQL datasets, this paper suggests new prompting approaches that break down the original question and avoid providing specific information in reasoning steps.
-Conversational text-to-SQL: Proposed text-to-SQL system consists of 3 parts:
-Multi-Tasking with prompting
-Constrained Decoding
-N-Best List Reranking
-T5QL: Taming language models for SQL generation: This work tries to bridge the gap of increasing accuracy of smaller LLMS like T5 for SQL query generation tasks. They show that dividing semantic parsing in two tasks, candidate SQLs generation and candidate re-ranking, is promising and can reduce the need for large LLMs.
-Reinforcement learning: As GPT was fine tuned into ChatGPT using RLHF technique to perform better on conversational tasks, in a similar fashion we can fine tune our model by assigning positive & negative rewards upon query generation. 
-Fine Tuning on domain specific dataset: This method can be used to overcome the problem of the models not being trained on internal/company data. We can create a small dataset which replicates the pattern of company data and use it for the finetuning process. I believe a small dataset can boost the performance significantly.
+  -  Currently I’m training the model on just 10,000 data points due to computational limitations. Model trained on all 78577 data points will perform better.  
+  -  Current dataset doesn’t contain all the types of SQL queries, for example: there is a lack of queries which ask to calculate the percentage of a given column, or do aggregation between columns. There is a lack of complex queries. If we generate a few examples of such complex queries, the model will perform better.  
+  -  While currently passing the input: when writing the create table statement, only single tables are created. If we generate some data points which create multiple tables, and have foreign key, primary key references in them. The model can understand relationships between different tables.  
+  -  
+- Improved Training Methods:  
+  -  Chain of thoughts prompting: In order to reduce error propagation and enhance results on text-to-SQL datasets, this paper suggests new prompting approaches that break down the original question and avoid providing specific information in reasoning steps.  
+  -  Conversational text-to-SQL: Proposed text-to-SQL system consists of 3 parts:  
+    -  Multi-Tasking with prompting. 
+    -  Constrained Decoding. 
+    -  N-Best List Reranking. 
+  -  T5QL: Taming language models for SQL generation: This work tries to bridge the gap of increasing accuracy of smaller LLMS like T5 for SQL query generation tasks. They show that dividing semantic parsing in two tasks, candidate SQLs generation and candidate re-ranking, is promising and can reduce the need for large LLMs.  
+  -  Reinforcement learning: As GPT was fine tuned into ChatGPT using RLHF technique to perform better on conversational tasks, in a similar fashion we can fine tune our model by assigning positive & negative rewards upon query generation. 
+Fine Tuning on domain specific dataset: This method can be used to overcome the problem of the models not being trained on internal/company data. We can create a small dataset which replicates the pattern of company data and use it for the finetuning process. I believe a small dataset can boost the performance significantly.  
 

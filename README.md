@@ -25,12 +25,13 @@ Dataset:
 - The T5 model requires the input data to have some fix token/prompt which is constant throughout all the data points.   
 - I have maintained the following format for the input: 
 
-The relevant table was constructed using the following SQL CREATE TABLE statement:  *Write Create Statement*  
+The relevant table was constructed using the following. 
+SQL CREATE TABLE statement:  *Write Create Statement*  
 Write a SQL query that answers the following question:  
 *Write Natural Language Query*. 
 
 
-THis will help the model understand the context of our task better.  
+- THis will help the model understand the context of our task better.  
 
 Future Work:  
 - Use Better Model:  

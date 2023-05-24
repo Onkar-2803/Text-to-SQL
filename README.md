@@ -10,7 +10,7 @@ How to run the project:
 
 
 Methodology: 
-An overview of my approach is, I convert the natural language into SQL queries and then execute those queries with the help of sqlite3 in python.
+An overview of my approach is, I convert the natural language into SQL queries and then execute those queries with the help of sqlite3 in python. Have used the happytransformer library acts as a wrapper to ease the implementation of text-generation models like T5, BART.
 
 Models:
 - I have used a pre-trained t5 model for the task.  

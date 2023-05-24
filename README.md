@@ -1,6 +1,6 @@
-# Text-to-SQL
+# Text-to-SQL #
 
-How to run the project:  
+## How to run the project:  ##
 - Directly run the .ipynb file provided.  
 - After installing the ‘happytransformer’ library, uninstall the ‘transformers’ library which gets installed during the installation of ‘happytransformer’.  
 - Restart the kernel.  

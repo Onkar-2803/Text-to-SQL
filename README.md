@@ -43,7 +43,7 @@ Future Work:
   -  While currently passing the input: when writing the create table statement, only single tables are created. If we generate some data points which create multiple tables, and have foreign key, primary key references in them. The model can understand relationships between different tables.  
   
 - Improved Training Methods:  
-  -  Chain of thoughts prompting: In order to reduce error propagation and enhance results on text-to-SQL datasets, this paper suggests new prompting approaches that break down the original question and avoid providing specific information in reasoning steps.  
+  -  [Chain of thoughts prompting](https://arxiv.org/abs/2305.14215): In order to reduce error propagation and enhance results on text-to-SQL datasets, this paper suggests new prompting approaches that break down the original question and avoid providing specific information in reasoning steps.  
   -  Conversational text-to-SQL: Proposed text-to-SQL system consists of 3 parts:  
       -  Multi-Tasking with prompting. 
       -  Constrained Decoding. 

@@ -50,5 +50,6 @@ Future Work:
       -  N-Best List Reranking. 
   -  T5QL: Taming language models for SQL generation: This work tries to bridge the gap of increasing accuracy of smaller LLMS like T5 for SQL query generation tasks. They show that dividing semantic parsing in two tasks, candidate SQLs generation and candidate re-ranking, is promising and can reduce the need for large LLMs.  
   -  Reinforcement learning: As GPT was fine tuned into ChatGPT using RLHF technique to perform better on conversational tasks, in a similar fashion we can fine tune our model by assigning positive & negative rewards upon query generation. 
-Fine Tuning on domain specific dataset: This method can be used to overcome the problem of the models not being trained on internal/company data. We can create a small dataset which replicates the pattern of company data and use it for the finetuning process. I believe a small dataset can boost the performance significantly.  
+  
+  -  Fine Tuning on domain specific dataset: This method can be used to overcome the problem of the models not being trained on internal/company data. We can create a small dataset which replicates the pattern of company data and use it for the finetuning process. I believe a small dataset can boost the performance significantly.  
 

@@ -1,13 +1,12 @@
 # Text-to-SQL
 
-How to run the project:
-Directly run the .ipynb file provided.
-After installing the ‘happytransformer’ library, uninstall the ‘transformers’ library which gets installed during the installation of ‘happytransformer’.
-Restart the kernel.
-Install older version of transformer (4.28.0).
-This is due to the fact that the newer version of transformer has a dependency issue with PartialState import. 
-Upload the .csv files of HR data for the model to query on it. 
-
+How to run the project:  
+- Directly run the .ipynb file provided.  
+- After installing the ‘happytransformer’ library, uninstall the ‘transformers’ library which gets installed during the installation of ‘happytransformer’.  
+- Restart the kernel.  
+- Install older version of transformer (4.28.0).  
+- This is due to the fact that the newer version of transformer has a dependency issue with PartialState import.     
+- Upload the .csv files of HR data for the model to query on it.  
 
 
 Methodology: 

@@ -34,15 +34,15 @@ Write a SQL query that answers the following question:
 - This will help the model understand the context of our task better.  
 
 ## Future Work:  ##
-- Use Better Model:  
+### - Use Better Model:  ###
   -  To increase the accuracy of generating SQL queries, as mentioned above in the Models section we can use Alpaca, GPT4, Santacoder. These models are trained on large amounts of data which is closely related to our fine tuning task.  
   
-- Use Better Dataset:  
+### - Use Better Dataset:  ###
   -  Currently I’m training the model on just 10,000 data points due to computational limitations. Model trained on all 78577 data points will perform better.  
   -  Current dataset doesn’t contain all the types of SQL queries, for example: there is a lack of queries which ask to calculate the percentage of a given column, or do aggregation between columns. There is a lack of complex queries. If we generate a few examples of such complex queries, the model will perform better.  
   -  While currently passing the input: when writing the create table statement, only single tables are created. If we generate some data points which create multiple tables, and have foreign key, primary key references in them. The model can understand relationships between different tables.  
   
-- Improved Training Methods:  
+### - Improved Training Methods:  ###
   -  [Chain of thoughts prompting](https://arxiv.org/abs/2305.14215): In order to reduce error propagation and enhance results on text-to-SQL datasets, this paper suggests new prompting approaches that break down the original question and avoid providing specific information in reasoning steps.  
   -  [Conversational text-to-SQL](https://assets.amazon.science/06/42/450f375148feb5b237be0e132bad/conversational-text-to-sql-an-odyssey-into-state-of-the-art-and-challenges-ahead.pdf): Proposed text-to-SQL system consists of 3 parts:  
       -  Multi-Tasking with prompting. 
